@@ -41,6 +41,15 @@ FBREF + 'posts'
 
 The bare requirements should be a form with at least a few inputs. Use the following object properties.
 
+```html
+<form>
+	<input ng-model="$ctrl.newPost.title" />
+	<input ng-model="$ctrl.newPost.body" />
+	<input ng-model="$ctrl.newPost.imgUrl" />
+</form>
+```
+which becomes 
+
 ```javascript
 {
 	title: string,
