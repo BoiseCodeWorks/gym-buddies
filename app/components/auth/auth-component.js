@@ -5,8 +5,28 @@
 			templateUrl: 'app/components/auth/auth.html',
 			controller: AuthController
 		})
+        .service('MemberService', function(){
+            var as = this;
+            var _member = {}; //Pointer dfghujiko6y7u832
+            
+            as.setMember = function(member){
+                // _member = member // pointer 3e4u8i90kofcghvjbskadf
+                for(var propName in member){
+                    _member[k] = member[k]
+                }
+            }
+            
+            var member = {
+                username: 'Jake overall'
+            }
+            
+            as.getMember = function(){
+                return _member //Pointer dfghujiko6y7u832
+            }
+            
+        })
 
-	function AuthController($scope, FBREF) {
+	function AuthController($scope, FBREF, MemberService) {
 		var ac = this;
 		var db = new Firebase(FBREF);
 
@@ -14,7 +34,8 @@
 
 		function update(snapshot) {
 			if (snapshot) {
-				ac.member = snapshot.val();
+				ac.member = snapshot.val(); // pointer 3e4u8i90kofcghvjbskadf
+                MemberService.setMember(ac.member);
 			}
 			$scope.$evalAsync(function () {
 				ac = ac;
