@@ -84,6 +84,7 @@
 				return authData.error;
 			}
 			ac.auth.authData = authData;
+            delete ac.auth.password;
 			db.child('users').child(authData.uid).set(ac.auth)
 			ac.login()
 		}
