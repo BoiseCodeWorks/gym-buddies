@@ -62,8 +62,12 @@
 			if (authData.error) {
 				return authData.error;
 			}
-			ac.auth.authData = authData;
-			db.child('users').child(authData.uid).set(ac.auth)
+			var member = {
+                username: ac.auth.username,
+                email: ac.auth.email,
+                id: authData.uid
+            }
+			db.child('users').child(authData.uid).set(member)
 			ac.login()
 		}
 
