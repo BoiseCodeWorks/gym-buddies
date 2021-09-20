@@ -69,3 +69,17 @@ FBREF + 'chats'
 ```
 
 Theoretically this should be a bit easier to pull off than the posts from above. Try adding a few extra things to a message like a `timestamp` and the `author` of the chat This you will need to pull off of the `auth-component` Can you think of some ways you might accomplish this?
+
+
+## Legal Overview
+
+The content under the CodeWorks®, LLC Organization and all of the individual repos are soley intended for use by CodeWorks Instruction to deliver Educational content to CodeWorks Students.
+
+---
+
+## Copyright
+
+© CodeWorks® LLC, 2021. Unauthorized use and/or duplication of this material without express and written permission from CodeWorks, LLC is strictly prohibited.
+
+
+<img src="https://bcw.blob.core.windows.net/public/img/7815839041305055" width="125">
